@@ -1,0 +1,18 @@
+def bar_chart(date, precipitation):
+    """
+    This function creates a bar plot using the given date and
+    Precipitation in London
+    """
+fig, ax = plt.subplots(figsize=(20, 15))
+
+ax.bar(date, precipitation, label='Precipitation')
+ax.grid(color='grey', linestyle='--', linewidth=0.001, alpha=0.3)
+plt.xlabel('Month')
+plt.ylabel('Precipitation')
+plt.title('Precipitation in London for year 2020')
+ax.legend()
+
+
+date = df_20.index
+precipitation = df_20['precipitation']
+bar_chart(date, precipitation)
